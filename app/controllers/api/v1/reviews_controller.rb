@@ -7,7 +7,7 @@ module Api
             review = Review.new(review_params)
   
             if review.save
-              render json: ReviewSerializer.new(review).serialize_json
+              render json: ReviewSerializer.new(review).serialized_json
             else
               render json: { error: reviews.errors.messages }, status: 422
             end
