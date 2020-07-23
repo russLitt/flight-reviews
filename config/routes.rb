@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-
+  
   root 'pages#index'
 
   namespace :api do
     namespace :v1 do
-      resources :airline param: :slug
-      resources :review, only: [:create, :destroy]
+      resources :airlines, param: :slug
+      resources :reviews, only: [:create, :destroy]
     end
   end
 
