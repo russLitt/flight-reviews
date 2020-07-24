@@ -7,15 +7,12 @@ const Card = styled.div`
   background: #fff;
 `
 const AirlineLogo = styled.div`
-  width: 70px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 
   img {
-    margin-top: 10px;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
     border: 1px solid #efefef;
   }
 `
@@ -32,7 +29,6 @@ const LinkWrapper = styled.div`
       border-radius: 4px;
       padding: 10px 50px;
       border: 1px solid #000;
-      width: 100%;
       text-decoration: none;
   }
 `
@@ -46,7 +42,7 @@ const Airline = (props) => {
             <AirlineName>{props.attributes.name}</AirlineName>
             <div className="airline-score">{props.attributes.avg_score}</div>
             <LinkWrapper>
-                <Link to={'/airlines/${props.attributes.slug}'}>View Airlines</Link>
+                <Link to={`/airlines/${props.attributes.slug}`}>View Airline</Link>
             </LinkWrapper>
         </Card>
     )

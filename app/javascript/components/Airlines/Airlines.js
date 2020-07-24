@@ -19,6 +19,7 @@ const Heading = styled.div`
 const Subheading = styled.div`
   font-weight: 300;
   font-size: 26px;
+  margin-bottom: 40px;
 `
 const Grid = styled.div`
   display: grid;
