@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import axios from 'axios'
 import Header from './Header'
 import styled from 'styled-components'
@@ -21,6 +22,10 @@ const Column = styled.div`
 
 const Main = styled.div`
   padding-left: 30px;
+`
+
+const Button = styled.div`
+  text-decoration: none;
 `
 
 const Airline = (props) => {
@@ -51,6 +56,9 @@ const Airline = (props) => {
               reviews={airline.included}
             />
             }
+            <Button>
+              <Link to={'/'}>Back to Home</Link>
+            </Button>
             </Main>
             <div className="reviews"></div>
         </Column>

@@ -14,6 +14,7 @@ const AirlineLogo = styled.div`
     height: 80px;
     width: 80px;
     border: 1px solid #efefef;
+    padding: 10px;
   }
 `
 const AirlineName = styled.div`

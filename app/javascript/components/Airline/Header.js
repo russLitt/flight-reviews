@@ -2,19 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  font-size: 100px 50px 100px 0;
+  padding: 100px 50px 100px 0;
+  font-size: 30px;
   
   img {
-    height: 80px;
-    width: 80px;
-  }
-  
-  h1 {
-    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    margin-bottom: -15px;
+    border: 1px solid #efefef;
+    padding: 10px;
   }
 `
 
 const TotalReviews = styled.div`
+  margin-top: 40px;
   font-size: 18px;
   padding: 10px 0;
 `
