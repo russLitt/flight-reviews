@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import axios from 'axios'
 import Header from './Header'
+import ReviewForm from './ReviewForm'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -25,7 +26,7 @@ const Main = styled.div`
 `
 
 const Button = styled.div`
-  text-decoration: none;
+  /*text-decoration: none;*/
 `
 
 const Airline = (props) => {
@@ -47,24 +48,26 @@ const Airline = (props) => {
 
     return(
     <Wrapper>
+        {
+          loaded &&
+      <Fragment>
         <Column>
             <Main>
-            {
-            loaded &&
             <Header 
               attributes={airline.data.attributes}
               reviews={airline.included}
             />
-            }
             <Button>
               <Link to={'/'}>Back to Home</Link>
             </Button>
-            </Main>
             <div className="reviews"></div>
+            </Main>
         </Column>
         <Column>
-            <div className="review-form">[Review form goes here]</div>
+            <ReviewForm/>
         </Column>
+       }
+        </Fragment>
     </Wrapper>
     )
 }
