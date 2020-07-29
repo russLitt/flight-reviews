@@ -49,11 +49,23 @@ const Airline = (props) => {
     const handleChange = (e) => {
       e.preventDefault()
 
-      console.log('name:', e.target.name, 'value:', e.target.value)
+      setReview(Object.assign({}, review, {[e.target.name]: e.target.value}))
+
+      console.log('review:', review)
     }
     
     const handleSubmit = (e) => {
       e.preventDefault()
+
+      const csrfToken = document.querySelector('[name=csrf-token]').content
+      axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
+
+      const airline_id = airline.data.id
+      axios.post('/api/v1/reviews', {review, airline_id})
+      .then(resp => {
+        debugger
+      })
+      .catch(resp => {})
     }    
 
     return(
