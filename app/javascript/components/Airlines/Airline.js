@@ -34,7 +34,6 @@ const LinkWrapper = styled.div`
   }
 `
 
-
 const Airline = (props) => {
     return(
         <Card>

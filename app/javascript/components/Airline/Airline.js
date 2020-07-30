@@ -43,7 +43,7 @@ const Airline = (props) => {
             setAirline(resp.data)
             setLoaded(true)
         })
-        .catch( resp => console.log(resp) )
+        .catch( data => console.log(resp) )
     }, [])
 
     const handleChange = (e) => {
@@ -63,7 +63,9 @@ const Airline = (props) => {
       const airline_id = airline.data.id
       axios.post('/api/v1/reviews', {review, airline_id})
       .then(resp => {
-        debugger
+        const included = [...airline.included, resp.data]
+        setAirline({...airline, included})
+        setReview({title:'', description:'', score: 0})
       })
       .catch(resp => {})
     }    

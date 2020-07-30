@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import styled from 'styled-components'
 
 const Title = styled.div`
@@ -6,6 +6,14 @@ const Title = styled.div`
 `
 
 const ReviewForm = (props) => {
+    const ratingOptions=[5,4,3,2,1].map((score, index) => {
+        return (
+        <Fragment>
+          <input type="radio" value={score} name="rating" onChange={() => console.log('selected:',score)} id={'rating-${score}'}/>
+          <label></label>
+        </Fragment>
+        )
+    })
     return(
         <div className="wrapper">
             <form onSubmit={props.handleSubmit}>
@@ -19,7 +27,7 @@ const ReviewForm = (props) => {
                 <div className="field">
                     <div className="rating-container">
                         <div className="rating-title-text">Rate this Airline</div>
-                        [Star rating here]
+                        {ratingOptions}
                     </div>
                 </div>
                 <button type="submit">Submit this review</button>
