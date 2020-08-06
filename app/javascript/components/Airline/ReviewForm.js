@@ -43,7 +43,7 @@ const RatingBox = styled.div`
       }
 
       input:not(:checked) ~ label:hover,
-      input:not(:checked) ~ label:hover ~ hover {
+      input:not(:checked) ~ label:hover ~ label {
         background-image: url('data:image/svg+xml;charset=UTF-8,${Hover}');
       }
   }
@@ -54,8 +54,8 @@ const ReviewForm = (props) => {
     const ratingOptions=[5,4,3,2,1].map((score, index) => {
         return (
         <Fragment>
-          <input type="radio" value={score} name="rating" onChange={() => console.log('selected:', score)} id={'rating-${score}'}/>
-          <label></label>
+          <input type="radio" value={score} checked={props.review.score == score} name="rating" onChange={() => console.log('selected:', score)} id={'rating-${score}'}/>
+          <label onClick={props.setRating.bind(this, score)}></label>
         </Fragment>
         )
     })
