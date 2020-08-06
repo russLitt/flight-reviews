@@ -31,7 +31,21 @@ const RatingBox = styled.div`
       cursor: pointer;
       width: 40px;
       height: 40px;
-      background-image: url();
+      background-image: url('data:image/svg+xml;charset=UTF-8,${Gray}');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+      }
+
+      input:checked ~ label,
+      input:checked ~ label ~ label {
+        background-image: url('data:image/svg+xml;charset=UTF-8,${Selected}');
+      }
+
+      input:not(:checked) ~ label:hover,
+      input:not(:checked) ~ label:hover ~ hover {
+        background-image: url('data:image/svg+xml;charset=UTF-8,${Hover}');
+      }
   }
 `
 const RatingTitle = styled.div``
@@ -40,7 +54,7 @@ const ReviewForm = (props) => {
     const ratingOptions=[5,4,3,2,1].map((score, index) => {
         return (
         <Fragment>
-          <input type="radio" value={score} name="rating" onChange={() => console.log('selected:',score)} id={'rating-${score}'}/>
+          <input type="radio" value={score} name="rating" onChange={() => console.log('selected:', score)} id={'rating-${score}'}/>
           <label></label>
         </Fragment>
         )
@@ -58,7 +72,9 @@ const ReviewForm = (props) => {
                 <div className="field">
                     <RatingContainer>
                         <div className="rating-title-text">Rate this Airline</div>
+                        <RatingBox>
                         {ratingOptions}
+                        </RatingBox>
                     </RatingContainer>
                 </div>
                 <button type="submit">Submit this review</button>
