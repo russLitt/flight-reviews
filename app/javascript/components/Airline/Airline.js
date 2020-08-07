@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const Column = styled.div`
   background: #fff;
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
   
   &:last-child {
     background: #000;

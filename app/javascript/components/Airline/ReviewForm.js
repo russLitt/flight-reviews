@@ -4,9 +4,6 @@ import Gray from './Stars/Gray'
 import Hover from './Stars/Hover'
 import Selected from './Stars/Selected'
 
-const Title = styled.div`
-  font-color: white;
-`
 const RatingContainer = styled.div`
   text-align: center;
   border-radius: 4px;
@@ -48,7 +45,64 @@ const RatingBox = styled.div`
       }
   }
 `
-const RatingTitle = styled.div``
+
+const Field = styled.div`
+  border-radius: 4px;
+
+  input {
+    width: 95%;
+    min-height: 50px;
+    border-radius: 4px;
+    border: 1px solid e6e6e6;
+    margin: 12px 0;
+    padding: 12px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 80px;
+    border-radius: 4px;
+    margin: 12px 0;
+    padding: 12px;
+
+  }
+`
+const Wrapper = styled.div`
+  background: #333;
+  padding: 20px;
+  height: 100vh;
+`
+const SubmitBtn = styled.div`
+  color: #fff;
+  background: #333;
+  border-radius: 4px;
+  margin-top: 12px;
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+  border: 1px solid #fff;
+  width: 96%;
+
+  &:hover {
+    background: #fff;
+    color: #333;
+    border: 1px solid #fff;
+  }
+`
+const Headline = styled.div`
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+`
+const RatingTitle = styled.div`
+  margin-top: 12px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+`
 
 const ReviewForm = (props) => {
     const ratingOptions=[5,4,3,2,1].map((score, index) => {
@@ -60,26 +114,26 @@ const ReviewForm = (props) => {
         )
     })
     return(
-        <div className="wrapper">
+        <Wrapper>
             <form onSubmit={props.handleSubmit}>
-                <div>Share your experience with {props.attributes.name} and leave a review</div>
-                <div className="field">
+                <Headline>Share your experience with {props.attributes.name} and leave a review</Headline>
+                <Field>
                     <input onChange={props.handleChange} value={props.review.title} type="text" name="title" placeholder="Review Title" />
-                </div>
-                <div className="field">
+                </Field>
+                <Field>
                     <input onChange={props.handleChange} value={props.review.descripion} type="text" name="description" placeholder="Review Description" />
-                </div>
-                <div className="field">
+                </Field>
+                <Field>
                     <RatingContainer>
-                        <div className="rating-title-text">Rate this Airline</div>
+                        <RatingTitle>Rate this Airline</RatingTitle>
                         <RatingBox>
-                        {ratingOptions}
+                          {ratingOptions}
                         </RatingBox>
                     </RatingContainer>
-                </div>
-                <button type="submit">Submit this review</button>
+                </Field>
+                <SubmitBtn type="submit">Submit this review</SubmitBtn>
             </form>
-        </div>
+        </Wrapper>
     )
 }
 
