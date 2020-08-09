@@ -35,6 +35,8 @@ const LinkWrapper = styled.div`
 `
 
 const Airline = (props) => {
+  const average_score = parseFloat(props.average_score / 100)
+  
     return(
         <Card>
             <AirlineLogo>
