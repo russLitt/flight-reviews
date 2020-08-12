@@ -77,6 +77,18 @@ const Airline = (props) => {
       setReview({...review, score})
     }
 
+  let reviews
+  if ( loaded && airline.included ) {
+    reviews = airline.included.map( (item, index) => {
+        return(
+          <Review
+            key={index}
+            attributes = { item.attributes }
+          />
+        )
+    })
+  }
+
     return(
     <Wrapper>
         {
@@ -88,11 +100,12 @@ const Airline = (props) => {
               attributes={airline.data.attributes}
               reviews={airline.included}
             />
+           
+            { reviews }
+            </Main>
             <Button>
               <Link to={'/'}>Back to Home</Link>
             </Button>
-            <div className="reviews"></div>
-            </Main>
         </Column>
         <Column>
             <ReviewForm
