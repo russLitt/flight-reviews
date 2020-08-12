@@ -54,7 +54,7 @@ const Field = styled.div`
     width: 95%;
     min-height: 50px;
     border-radius: 4px;
-    border: 1px solid e6e6e6;
+    border: 1px solid #e6e6e6;
     margin: 0 0 12px 0;
     padding: 12px;
   }
