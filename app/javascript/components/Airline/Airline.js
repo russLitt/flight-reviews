@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom'
 import axios from 'axios'
 import Header from './Header'
 import ReviewForm from './ReviewForm'
+import Review from './Review'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -63,9 +64,9 @@ const Airline = (props) => {
       const airline_id = airline.data.id
       axios.post('/api/v1/reviews', {review, airline_id})
       .then( (resp) => {
-        const included = [...airline.included, resp.data]
-        setAirline({...airline, included})
-        setReview({title: '', description: '', score: 0})
+        const included = [ ...airline.included, resp.data ]
+        setAirline({ ...airline, included })
+        setReview({ title: '', description: '', score: 0 })
       })
       .catch(resp => {})
     }    
