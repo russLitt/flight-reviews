@@ -67,11 +67,21 @@ const Field = styled.div`
     padding: 12px;
   }
 `
+
 const Wrapper = styled.div`
   background: #333;
   padding: 20px;
   height: 100vh;
 `
+
+const Headline = styled.div`
+  color: #fff;
+  margin-top: 80px;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+`
+
 const SubmitBtn = styled.input.attrs({
   type: 'submit',
   value: 'Submit Review'
@@ -94,12 +104,7 @@ const SubmitBtn = styled.input.attrs({
     border: 1px solid #fff;
   }
 `
-const Headline = styled.div`
-  color: #fff;
-  padding: 20px;
-  font-size: 22px;
-  font-weight: bold;
-`
+
 const RatingBoxTitle = styled.div`
   margin-top: 12px;
   padding-bottom: 20px;
@@ -134,7 +139,7 @@ const ReviewForm = (props) => {
                         </RatingBox>
                     </RatingContainer>
                 </Field>
-                <SubmitBtn />
+                <SubmitBtn/>
             </form>
         </Wrapper>
     )

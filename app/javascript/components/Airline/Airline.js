@@ -23,6 +23,7 @@ const Column = styled.div`
 `
 
 const Main = styled.div`
+  margin-top: -40px;
   padding-left: 30px;
 `
 

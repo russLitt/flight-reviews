@@ -11,9 +11,7 @@ const RatingContainer = styled.div`
   display: flex;
   flex-direction: row;
 `
-const RatingScore = styled.div`
 
-`
 const Title = styled.div`
   padding: 20px 0 0 0;
   font-size: 20px;
