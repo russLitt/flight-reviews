@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useState, useEffect, Fragment, Component } from 'react'
 import axios from 'axios'
 import Airline from './Airline'
 import styled from 'styled-components'
@@ -15,7 +15,7 @@ const Heading = styled.div`
   h1 {
       font-size: 40px;
   }
-  `
+`
 const Subheading = styled.div`
   font-weight: 300;
   font-size: 26px;
