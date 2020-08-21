@@ -6,6 +6,12 @@ import styled from 'styled-components'
 const Card = styled.div`
   border: 1px solid #efefef;
   background: #fff;
+
+  &:hover{
+    border-color: SteelBlue;
+    background: AliceBlue;
+    transition: ease-in-out 0.3s;
+  }
 `
 const AirlineLogo = styled.div`
   margin: auto;
@@ -26,12 +32,26 @@ const LinkWrapper = styled.div`
   height: 50px;
 
   a {
-      color: #fff;
-      background: #000;
-      border-radius: 4px;
-      padding: 10px 50px;
-      border: 1px solid #000;
-      text-decoration: none;
+    color: #fff;
+    background-color: SteelBlue;
+    border-radius: 4px;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid SteelBlue;
+    text-align: center;
+    line-height: 20px;
+    min-height: 40px;
+    margin: 7px;
+    font-weight: 600;
+    text-decoration: none;
+    width: 100%;
+    transition: ease-in-out 0.3s;
+
+    &:hover{
+      border-color: SteelBlue;
+      background: LightSteelBlue;
+    }
   }
 `
 

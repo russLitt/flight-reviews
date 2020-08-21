@@ -10,6 +10,7 @@ const Home = styled.div`
   margin-right: auto;
   `
 const Heading = styled.div`
+  margin-top: -30px;
   padding: 100px 100px 10px 100px;
   
   h1 {
