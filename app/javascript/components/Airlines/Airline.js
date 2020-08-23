@@ -28,6 +28,7 @@ const AirlineName = styled.div`
   padding: 20px 0 10px 0;
 `
 const LinkWrapper = styled.div`
+  type: button;
   margin: 30px 0 20px 0;
   height: 50px;
 
@@ -45,7 +46,7 @@ const LinkWrapper = styled.div`
     margin: 7px;
     font-weight: 600;
     text-decoration: none;
-    width: 100%;
+    width: 70%;
     transition: ease-in-out 0.3s;
 
     &:hover{
@@ -65,7 +66,7 @@ const Airline = (props) => {
             <AirlineName>{props.attributes.name}</AirlineName>
             <Rating score={props.attributes.avg_score}/>
             <LinkWrapper>
-                <Link to={`/airlines/${props.attributes.slug}`}>View Airline</Link>
+                <Link to={`/airlines/${props.attributes.slug}`} class="btn">View Airline</Link>
             </LinkWrapper>
         </Card>
     )
