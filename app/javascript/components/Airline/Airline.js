@@ -23,7 +23,6 @@ const Column = styled.div`
 `
 
 const Main = styled.div`
-  margin-top: -40px;
   padding-left: 30px;
 `
 
@@ -101,12 +100,11 @@ const Airline = (props) => {
               attributes={airline.data.attributes}
               reviews={airline.included}
             />
-           
             { reviews }
             </Main>
-            <Button>
+            {/* <Button>
               <Link to={'/'}>Back to Home</Link>
-            </Button>
+            </Button> */}
         </Column>
         <Column>
             <ReviewForm

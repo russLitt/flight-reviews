@@ -51,7 +51,7 @@ const Field = styled.div`
   border-radius: 4px;
 
   input {
-    width: 95%;
+    width: 100%;
     min-height: 50px;
     border-radius: 4px;
     border: 1px solid #e6e6e6;
@@ -76,7 +76,7 @@ const Wrapper = styled.div`
 
 const Headline = styled.div`
   color: #fff;
-  margin-top: 80px;
+  margin: 20px 0 20px 0;
   padding: 20px;
   font-size: 22px;
   font-weight: bold;
@@ -87,9 +87,9 @@ const SubmitBtn = styled.input.attrs({
   value: 'Submit Review'
 })`
   color: #fff;
-  background: #333;
+  background-color: SteelBlue;
   border-radius: 4px;
-  margin-top: 12px;
+  margin-top: 20px;
   padding: 12px;
   font-size: 18px;
   text-align: center;
@@ -97,12 +97,11 @@ const SubmitBtn = styled.input.attrs({
   transition: ease-in-out 0.1s;
   border: 1px solid #fff;
   width: 100%;
+  transition: ease-in-out 0.3s;
 
-  &:hover {
-    background: #fff;
-    color: #333;
-    border: 1px solid #fff;
-  }
+  &:hover{
+    border-color: SteelBlue;
+    background: LightSteelBlue;
 `
 
 const RatingBoxTitle = styled.div`
