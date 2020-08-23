@@ -27,6 +27,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   width: 100%;
+  padding-bottom: 50px;
 `
 
 const Airlines = () => {

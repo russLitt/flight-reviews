@@ -20,12 +20,10 @@ function App() {
             <Navbar.Brand href="/">Flight Reviews</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-            <Right>
-              <Nav className="mr-auto">
+              <Nav className="ml-auto">
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#link">Log Out</Nav.Link>
             </Nav>
-            </Right>
           </Navbar.Collapse>
         </Navbar>
     <Switch>
