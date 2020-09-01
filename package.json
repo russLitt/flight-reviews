@@ -1,6 +1,7 @@
 {
-  "name": "flight_reviews",
+  "name": "flight-reviews",
   "private": true,
+  "homepage": "/build",
   "dependencies": {
     "@babel/preset-react": "^7.10.4",
     "@fortawesome/fontawesome-free": "^5.14.0",
@@ -26,5 +27,10 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "description": "a rails/react app for reviewing airlines",
+  "main": "true",
+  "repository": "https://github.com/russLitt/flight-reviews",
+  "author": "Russell Anderson",
+  "license": "false"
 }
